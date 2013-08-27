@@ -40,3 +40,19 @@ Codeship [JavaScript Testing with Jasmine] (http://blog.codeship.io/2013/07/30/t
 
 ## QUnit Evaluation Notes
 
+I downloaded Qunit.js and Qunit.css from [here] (https://github.com/jquery/qunit/tree/master/qunit) and placed them in a directory called
+*core*.
+
+I created a directory called *src* for the actual JavaScript we want to test. I added Animal.js for evaluation.
+
+I created a directory called *test* and added AnimalTest.js.
+
+I created the file TestRunner.html with the appropriate source and spec files.
+
+To invoke the tests simply open TestRunner.html in a browser.
+
+### Credits
+
+Swift Lizard [Development with jQuery & Qunit] (http://www.swift-lizard.com/2009/11/24/test-driven-development-with-jquery-qunit)
+
+Tuts+ [How to Test your JavaScript Code with QUnit] (http://net.tutsplus.com/tutorials/javascript-ajax/how-to-test-your-javascript-code-with-qunit/)
