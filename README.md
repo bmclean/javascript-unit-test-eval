@@ -18,9 +18,9 @@ The SpecRunner.html file is what runs the tests in a browser. I edited the file 
 Jasmine tests are primarily two parts, describe blocks and it blocks:
 
     describe('JavaScript addition operator', function () {
-      it('adds two numbers together', function () {
-        expect(1 + 2).toEqual(3);
-      });
+        it('should add two numbers together', function () {
+            expect(1 + 2).toEqual(3);
+        });
     });
 
 The call to *describe* defines a test suite. Here we name the subject that we want to test in this suite. Jasmine supports
@@ -76,8 +76,9 @@ I created the file TestRunner.html with the appropriate source and spec files.
 
 A QUnit test looks like this:
 
-    test( "JavaScript addition operator", function() {
-        equal( (1 + 2), 3, "should add two numbers together" );
+    module( "JavaScript addition operator" );
+    test( "should add two numbers together", 1, function() {
+        equal( (1 + 2), 3, "The JavaScript addition operator should add two numbers together" );
     });
 
 Available QUnit assertions:
