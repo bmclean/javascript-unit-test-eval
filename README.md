@@ -4,12 +4,18 @@ This project contains the notes and source code created/captured while evaluatin
 
 ## Jasmine Evaluation Notes
 
-I downloaded [jasmine-standalone-1.3.1.zip ] (https://github.com/pivotal/jasmine/downloads) and unzipped it. The lib folder contains
-the actual Jasmine framework standalone files.
+Jasmine works with any JavaScript framework, has a built in local server for displaying results, doesn't need a DOM to
+test JavaScript functions, has a Jasmine-jquery extension available and provides fixture support (meaning we can test
+JavaScript against an HTML file or fragment).
 
-The tests go in the spec folder. I created the javascripts/fixtures and javascripts/helpers directories. I added
-[jasmine-jquery.js] (https://github.com/velesin/jasmine-jquery), order_form.html ([see here] (https://github.com/velesin/jasmine-jquery#html-fixtures)),
-AnimalSpec.js and credit_card_spec.js.
+I downloaded [jasmine-standalone-1.3.1.zip ] (https://github.com/pivotal/jasmine/downloads) and unzipped it. The *lib*
+folder contains the actual Jasmine framework standalone files.
+
+The tests go in the *spec* folder and I added AdditionSpec.js, AnimalSpec.js and credit_card_spec.js.
+
+I created the javascripts/fixtures and javascripts/helpers directories. I added
+[jasmine-jquery.js] (https://github.com/velesin/jasmine-jquery) to helpers and order_form.html
+([see here] (https://github.com/velesin/jasmine-jquery#html-fixtures)) to fixtures.
 
 The actual JavaScript (the code we want to test) will be put in the src subdirectory. I added jquery-1.10.2.min, credit_card.js and Animal.js for evaluation.
 
@@ -70,7 +76,7 @@ directory called *core*.
 
 I created a directory called *src* for the actual JavaScript we want to test. I added Animal.js for evaluation.
 
-I created a directory called *test* and added AnimalTest.js.
+I created a directory called *test* and added AdditionTest and AnimalTest.js.
 
 I created the file TestRunner.html with the appropriate source and spec files.
 
@@ -92,11 +98,7 @@ Available QUnit assertions:
     notStrictEqual(actual, expected)
     raises(block)
 
-QUnit can handle synchronous callbacks by defining the number of assertions a test contains:
-
-    test( "JavaScript addition operator", 1, function() {
-
-It can also handle asynchronous callbacks:
+QUnit can handle asynchronous callbacks by using asyncTest and defining the number of assertions a test contains:
 
     asyncTest( "JavaScript addition operator", 1, function() {
 
